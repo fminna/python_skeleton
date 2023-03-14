@@ -1,5 +1,9 @@
 # PythonSkeleton
 
+[![Python package](https://github.com/fminna/python_skeleton/actions/workflows/python_test.yaml/badge.svg?branch=master)](https://github.com/fminna/python_skeleton/actions/workflows/python_test.yaml)
+
+[![Docker build and push Image](https://github.com/fminna/python_skeleton/actions/workflows/docker_push.yaml/badge.svg?branch=master)](https://github.com/fminna/python_skeleton/actions/workflows/docker_push.yaml)
+
 A skeleton to create Python applications from scratch.
 
 ----------
