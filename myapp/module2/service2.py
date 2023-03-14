@@ -17,10 +17,13 @@
 
 """
 
+import logging
 
 def svc2_hello():
     """Function to print Hello world from module2.
 
     """
 
-    print("Hello world from module2!")
+    logging.info('module2.service2.svc2_hello()')
+
+    print('Hello world from module2!')

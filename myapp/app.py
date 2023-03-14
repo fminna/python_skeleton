@@ -15,6 +15,7 @@
 """Main file of the project"""
 
 import argparse
+import logging
 
 from myapp.module1.service1 import svc1_hello
 from myapp.module2.service2 import svc2_hello
@@ -38,6 +39,7 @@ def parse_args():
 
     # Check that at least one argument is provided
     if not args.example:
+        logging.error('At least one argument is required.')
         parser.error('At least one argument is required.')
 
     return args
@@ -48,12 +50,23 @@ def main():
 
     """
 
+    # Set up logging
+    logging.basicConfig(filename='.myproject.log',
+                        level=logging.DEBUG,
+                        filemode='w')
+
+    logging.info('Executing the main function...')
+
     args = parse_args()
 
     if args.example:
+        logging.info('Executing the --example argument')
         print('Hello world!')
         svc1_hello()
         svc2_hello()
+
+
+    logging.info('Exiting...')
 
 
 if __name__ == '__main__':

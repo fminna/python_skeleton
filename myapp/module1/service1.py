@@ -12,17 +12,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
 """A functionality implemented by my app.
 
 """
 
+import logging
 
 def svc1_hello():
     """Function to print Hello world from module1.
 
     """
 
-    print("Hello world from module1!")
+    logging.info('module1.service1.svc1_hello()')
+
+    print('Hello world from module1!')
 
     return True
