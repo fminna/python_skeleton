@@ -56,6 +56,6 @@ Following this guide also allows the automatic generation of the Documentation.
 
 ## Documentation
 
-The Documentation for this project is automatically generated using the [Sphinx](https://www.sphinx-doc.org/en/master/) tool, and it is available at [PythonSkeleton](https://fminna.github.io/python_skeleton/).
+The Documentation for this project is automatically generated using the [Sphinx](https://www.sphinx-doc.org/en/master/) tool.
 
 ----------
