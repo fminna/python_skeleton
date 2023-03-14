@@ -51,7 +51,10 @@ def main():
     """
 
     # Set up logging
-    logging.basicConfig(filename='.myproject.log', level=logging.DEBUG, filemode='w')
+    logging.basicConfig(filename='.myproject.log',
+                        level=logging.DEBUG,
+                        filemode='w')
+
     logging.info('Executing the main function...')
 
     args = parse_args()
