@@ -24,7 +24,7 @@ from pkg_resources import parse_requirements
 
 # Run Sphinx make html command
 try:
-    subprocess.check_call('cd ./docs && make html', shell=True)
+    subprocess.check_call('cd ./docs && make clean && make html && sphinx-build -b html -d _build/doctrees . html', shell=True)
 except subprocess.CalledProcessError as e:
     print(f"Error: {e}")
 

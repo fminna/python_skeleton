@@ -1,5 +1,5 @@
 Testing
-=====
+=======
 
 This section provides information on how to test this project.
 

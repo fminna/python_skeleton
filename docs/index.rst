@@ -30,7 +30,7 @@ Usage
 This section should provide instructions for using your project.
 
 Testing
-=====
+=======
 
 This section should provide instructions for testing your project.
 
