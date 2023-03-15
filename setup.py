@@ -18,20 +18,27 @@
 """
 
 import subprocess
+import os
 from setuptools import setup, find_packages
 from pkg_resources import parse_requirements
 
 
 # Run Sphinx make html command
 try:
-    subprocess.check_call('cd ./docs && make clean && make html && sphinx-build -b html -d _build/doctrees . html', shell=True)
+    subprocess.check_call("cd ./docs && make clean && make html && sphinx-build -b html -d _build/doctrees . html", shell=True)
 except subprocess.CalledProcessError as e:
     print(f"Error: {e}")
 
 
+if not os.path.isfile("requirements.txt"):
+    try:
+        subprocess.check_call("pip freeze > requirements.txt", shell=True)
+    except subprocess.CalledProcessError as e:
+        print(f"Error: {e}")
+
 # Parse requirements.txt file
-with open('requirements.txt') as f:
-    reqs = [str(req) for req in parse_requirements(f) if not str(req).startswith('-i')]
+with open("requirements.txt", encoding="UTF-8") as f:
+    reqs = [str(req) for req in parse_requirements(f) if not str(req).startswith("-i")]
 
 
 setup(
@@ -40,10 +47,10 @@ setup(
     author="Francesco Minna", 
     description="Lorem Ipsum",
     packages=find_packages(),
-    package_dir={'myapp': 'myapp'},
+    package_dir={"myapp": "myapp"},
     entry_points={
-        'console_scripts': [
-            'myapp=myapp.__main__:main'
+        "console_scripts": [
+            "myapp=myapp.__main__:main"
         ],
     },
     install_requires=reqs,
